@@ -6,4 +6,11 @@
   <version>1.0-SNAPSHOT</version>
   <name>Archetype - graphql</name>
   <url>http://maven.apache.org</url>
+  <dependencies>
+    <dependency>
+      <groupId>io.rest-assured</groupId>
+      <artifactId>rest-assured</artifactId>
+      <version>5.4.0</version>
+    </dependency>
+  </dependencies>
 </project>
