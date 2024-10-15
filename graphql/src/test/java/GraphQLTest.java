@@ -30,4 +30,64 @@ public class GraphQLTest {
 
 
     }
+    @Test
+    public void GraphqlTestSPACEX(){
+        ValidatableResponse response;
+        response = given().header("content-type","application/json")
+//            .body("{\"query\":\"query{\\n  getAllUsers{\\n firstName,id\\n }\\n}\",\"variables\":null}")
+                .body("{\"query\":\"query{\\n  getAllUsers{\\n firstName,id\\n }\\n}\",\"variables\":null}")
+//            .body("{\"query\":\"{\\n getAllUsers {\\n id, firstName\\n}\\n}\",\"variables\":null} ")
+
+                .when().post("https://graphql-api-ppql.onrender.com/graphql")
+                .then()
+                .assertThat()
+                .body("data.getAllUsers.firstName",hasItems("Wilbur","Oriana","Brade","Sebastian"))
+                .statusCode(200).log().all();
+
+        System.out.println(response);
+
+
+
+
+    }
+    @Test
+    public void GraphqlTestUsers(){
+        ValidatableResponse response;
+        response = given().header("content-type","application/json")
+//            .body("{\"query\":\"query{\\n  getAllUsers{\\n firstName,id\\n }\\n}\",\"variables\":null}")
+                .body("{\"query\":\"query{\\n  getAllUsers{\\n firstName,id\\n }\\n}\",\"variables\":null}")
+//            .body("{\"query\":\"{\\n getAllUsers {\\n id, firstName\\n}\\n}\",\"variables\":null} ")
+
+                .when().post("https://graphql-api-ppql.onrender.com/graphql")
+                .then()
+                .assertThat()
+                .body("data.getAllUsers.firstName",hasItems("Wilbur","Oriana","Brade","Sebastian"))
+                .statusCode(200).log().all();
+
+        System.out.println(response);
+
+
+
+
+    }
+    @Test
+    public void GraphqlUsers(){
+        ValidatableResponse response;
+        response = given().header("content-type","application/json")
+//            .body("{\"query\":\"query{\\n  getAllUsers{\\n firstName,id\\n }\\n}\",\"variables\":null}")
+                .body("{\"query\":\"query{\\n  getAllUsers{\\n firstName,id\\n }\\n}\",\"variables\":null}")
+//            .body("{\"query\":\"{\\n getAllUsers {\\n id, firstName\\n}\\n}\",\"variables\":null} ")
+
+                .when().post("https://graphql-api-ppql.onrender.com/graphql")
+                .then()
+                .assertThat()
+                .body("data.getAllUsers.firstName",hasItems("Wilbur","Oriana","Brade","Sebastian"))
+                .statusCode(200).log().all();
+
+        System.out.println(response);
+
+
+
+
+    }
 }
