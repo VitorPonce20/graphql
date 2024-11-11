@@ -19,5 +19,5 @@ public class AllFilmsPOJO {
             "            }\n" +
             "        }\n" +
             "    }\n" +
-            "}↵↵\"";
+            "}↵↵\" ";
 }
